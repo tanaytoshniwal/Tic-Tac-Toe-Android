@@ -1,9 +1,12 @@
 package com.example.alphabat69.tic_tac_toe;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+
+import java.util.HashMap;
 
 public class Activity1 extends AppCompatActivity implements View.OnClickListener{
     ImageButton zero,one,two,three,four,five,six,seven,eight;
@@ -76,7 +79,12 @@ public class Activity1 extends AppCompatActivity implements View.OnClickListener
             }
         }
         chance--;
+        if(chance==0)
+            result();
         check();
+    }
+    public void result(){
+
     }
     public void check(){
 
