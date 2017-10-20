@@ -49,11 +49,12 @@ public class Activity1 extends AppCompatActivity implements View.OnClickListener
         switch(v.getId()){
             case R.id.zero:{
                 if(b) {
-                    zero.setBackgroundColor(Color.BLUE);
+                    //zero.setBackgroundColor(Color.BLUE);
+                    zero.setBackgroundResource(R.drawable.o);
                     layout[0]++;
                 }
                 else {
-                    zero.setBackgroundColor(Color.RED);
+                    zero.setBackgroundResource(R.drawable.x);
                     layout[0]+=2;
                 }
                 zero.setClickable(false);
@@ -61,11 +62,11 @@ public class Activity1 extends AppCompatActivity implements View.OnClickListener
             }
             case R.id.one:{
                 if(b) {
-                    one.setBackgroundColor(Color.BLUE);
+                    one.setBackgroundResource(R.drawable.o);
                     layout[1]++;
                 }
                 else {
-                    one.setBackgroundColor(Color.RED);
+                    one.setBackgroundResource(R.drawable.x);
                     layout[1]+=2;
                 }
                 one.setClickable(false);
@@ -73,11 +74,11 @@ public class Activity1 extends AppCompatActivity implements View.OnClickListener
             }
             case R.id.two:{
                 if(b) {
-                    two.setBackgroundColor(Color.BLUE);
+                    two.setBackgroundResource(R.drawable.o);
                     layout[2]++;
                 }
                 else {
-                    two.setBackgroundColor(Color.RED);
+                    two.setBackgroundResource(R.drawable.x);
                     layout[2]+=2;
                 }
                 two.setClickable(false);
@@ -85,11 +86,11 @@ public class Activity1 extends AppCompatActivity implements View.OnClickListener
             }
             case R.id.three:{
                 if(b) {
-                    three.setBackgroundColor(Color.BLUE);
+                    three.setBackgroundResource(R.drawable.o);
                     layout[3]++;
                 }
                 else {
-                    three.setBackgroundColor(Color.RED);
+                    three.setBackgroundResource(R.drawable.x);
                     layout[3]+=2;
                 }
                 three.setClickable(false);
@@ -97,11 +98,11 @@ public class Activity1 extends AppCompatActivity implements View.OnClickListener
             }
             case R.id.four:{
                 if(b) {
-                    four.setBackgroundColor(Color.BLUE);
+                    four.setBackgroundResource(R.drawable.o);
                     layout[4]++;
                 }
                 else {
-                    four.setBackgroundColor(Color.RED);
+                    four.setBackgroundResource(R.drawable.x);
                     layout[4]+=2;
                 }
                 four.setClickable(false);
@@ -109,11 +110,11 @@ public class Activity1 extends AppCompatActivity implements View.OnClickListener
             }
             case R.id.five:{
                 if(b) {
-                    five.setBackgroundColor(Color.BLUE);
+                    five.setBackgroundResource(R.drawable.o);
                     layout[5]++;
                 }
                 else {
-                    five.setBackgroundColor(Color.RED);
+                    five.setBackgroundResource(R.drawable.x);
                     layout[5]+=2;
                 }
                 five.setClickable(false);
@@ -121,11 +122,11 @@ public class Activity1 extends AppCompatActivity implements View.OnClickListener
             }
             case R.id.six:{
                 if(b) {
-                    six.setBackgroundColor(Color.BLUE);
+                    six.setBackgroundResource(R.drawable.o);
                     layout[6]++;
                 }
                 else {
-                    six.setBackgroundColor(Color.RED);
+                    six.setBackgroundResource(R.drawable.x);
                     layout[6]+=2;
                 }
                 six.setClickable(false);
@@ -133,11 +134,11 @@ public class Activity1 extends AppCompatActivity implements View.OnClickListener
             }
             case R.id.seven:{
                 if(b) {
-                    seven.setBackgroundColor(Color.BLUE);
+                    seven.setBackgroundResource(R.drawable.o);
                     layout[7]++;
                 }
                 else {
-                    seven.setBackgroundColor(Color.RED);
+                    seven.setBackgroundResource(R.drawable.x);
                     layout[7]+=2;
                 }
                 seven.setClickable(false);
@@ -145,11 +146,11 @@ public class Activity1 extends AppCompatActivity implements View.OnClickListener
             }
             case R.id.eight:{
                 if(b) {
-                    eight.setBackgroundColor(Color.BLUE);
+                    eight.setBackgroundResource(R.drawable.o);
                     layout[8]++;
                 }
                 else {
-                    eight.setBackgroundColor(Color.RED);
+                    eight.setBackgroundResource(R.drawable.x);
                     layout[8]+=2;
                 }
                 eight.setClickable(false);
@@ -161,8 +162,8 @@ public class Activity1 extends AppCompatActivity implements View.OnClickListener
     }
     public void pass(boolean b){
         String str="";
-        if(b) str="Player One(Blue) Wins!";
-        else str="Player Two(Red) Wins!";
+        if(b) str="Player One(OctoCat) Wins!";
+        else str="Player Two(Cross) Wins!";
         final AlertDialog.Builder builder;
         builder = new AlertDialog.Builder(Activity1.this).setTitle("Congratulations!").setMessage(str)
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -178,7 +179,19 @@ public class Activity1 extends AppCompatActivity implements View.OnClickListener
         dialog.show();
     }
     public void tie(){
-
+        final AlertDialog.Builder builder;
+        builder = new AlertDialog.Builder(Activity1.this).setTitle("Oh bhai bhai bhai bhai!").setMessage("It's a tie!")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(Activity1.this,Activity1.class));
+                        finish();
+                    }
+                });
+        final AlertDialog dialog=builder.create();
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.setCancelable(false);
+        dialog.show();
     }
     public void result(){
         int ret=check();
