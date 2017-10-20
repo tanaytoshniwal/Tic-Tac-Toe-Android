@@ -42,39 +42,75 @@ public class Activity1 extends AppCompatActivity implements View.OnClickListener
             b=true;
         switch(v.getId()){
             case R.id.zero:{
-
+                if(b)
+                    zero.setBackgroundColor(Color.BLUE);
+                else
+                    zero.setBackgroundColor(Color.RED);
+                zero.setClickable(false);
                 break;
             }
             case R.id.one:{
-
+                if(b)
+                    one.setBackgroundColor(Color.BLUE);
+                else
+                    one.setBackgroundColor(Color.RED);
+                one.setClickable(false);
                 break;
             }
             case R.id.two:{
-
+                if(b)
+                    two.setBackgroundColor(Color.BLUE);
+                else
+                    two.setBackgroundColor(Color.RED);
+                two.setClickable(false);
                 break;
             }
             case R.id.three:{
-
+                if(b)
+                    three.setBackgroundColor(Color.BLUE);
+                else
+                    three.setBackgroundColor(Color.RED);
+                three.setClickable(false);
                 break;
             }
             case R.id.four:{
-
+                if(b)
+                    four.setBackgroundColor(Color.BLUE);
+                else
+                    four.setBackgroundColor(Color.RED);
+                four.setClickable(false);
                 break;
             }
             case R.id.five:{
-
+                if(b)
+                    five.setBackgroundColor(Color.BLUE);
+                else
+                    five.setBackgroundColor(Color.RED);
+                five.setClickable(false);
                 break;
             }
             case R.id.six:{
-
+                if(b)
+                    six.setBackgroundColor(Color.BLUE);
+                else
+                    six.setBackgroundColor(Color.RED);
+                six.setClickable(false);
                 break;
             }
             case R.id.seven:{
-
+                if(b)
+                    seven.setBackgroundColor(Color.BLUE);
+                else
+                    seven.setBackgroundColor(Color.RED);
+                seven.setClickable(false);
                 break;
             }
             case R.id.eight:{
-
+                if(b)
+                    eight.setBackgroundColor(Color.BLUE);
+                else
+                    eight.setBackgroundColor(Color.RED);
+                eight.setClickable(false);
                 break;
             }
         }
